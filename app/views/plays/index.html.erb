@@ -1,5 +1,5 @@
-<div class="alert alert-info" role="alert">
-    <h1> Hello, I'm Jeison De Jesús Anillo Pérez </h1>
-</div>
+<% @plays.each do |play| %>
+    <h2> <%= link_to play.title, play_path(play) %> </h2>
+<% end %>
 
-<p> Testing </p>
+<%= link_to 'Add play', new_play_path %>
