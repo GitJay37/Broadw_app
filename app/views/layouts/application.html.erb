@@ -13,7 +13,10 @@
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a> <%= link_to 'Broadway', root_path, class: 'navbar-brand'%> </a>
+        <a> <%= link_to 'Broadway', root_path, class: 'navbar-brand' %> </a>
+          <% if user_signed_in? %>
+            <a> <%= link_to 'Add play', new_play_path, class: 'navbar-brand' %> </a>
+          <% end %>
 
         <div class="navbar-nav ml-auto">
           <% if user_signed_in? %>
@@ -26,18 +29,12 @@
             </li>
             
             <li> 
-              <%= link_to 'Log in', new_user_registration_path %> 
+              <%= link_to 'Log in', new_user_session_path %> 
             </li>
           <% end %>
         </div>
       </nav>
     </header>
-
-    <ul class="nav navbar-nav">
-      <% if user_signed_in? %>
-        <li> <%= link_to 'Add play', new_play_path %> </li>
-      <% end %>
-    </ul>
     
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
