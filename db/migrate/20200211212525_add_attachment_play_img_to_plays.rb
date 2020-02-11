@@ -1,4 +1,4 @@
-class AddAttachmentPlayImgToPlays < ActiveRecord::Migration
+class AddAttachmentPlayImgToPlays < ActiveRecord::Migration[6.0]
   def self.up
     change_table :plays do |t|
       t.attachment :play_img
