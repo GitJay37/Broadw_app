@@ -61,5 +61,5 @@ Rails.application.configure do
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  Paperclip.options[:command_path] = "/c/WINDOWS/system32/" #/usr/local/bin/ 
+  Paperclip.options[:command_path] = '/c/Program Files (x86)/GnuWin32/bin'
 end
