@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_11_212525) do
+ActiveRecord::Schema.define(version: 2020_02_15_202956) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,17 @@ ActiveRecord::Schema.define(version: 2020_02_11_212525) do
     t.string "play_img_content_type"
     t.bigint "play_img_file_size"
     t.datetime "play_img_updated_at"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "rating"
+    t.string "integer"
+    t.string "comment"
+    t.string "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "play_id"
   end
 
   create_table "users", force: :cascade do |t|
