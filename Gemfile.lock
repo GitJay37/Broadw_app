@@ -133,7 +133,7 @@ GEM
     public_suffix (4.0.3)
     puma (4.3.1)
       nio4r (~> 2.0)
-    rack (2.1.2)
+    rack (2.2.3)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -241,7 +241,7 @@ DEPENDENCIES
   devise (~> 4.7, >= 4.7.1)
   jbuilder (~> 2.7)
   paperclip (~> 6.1)
-  pg
+  pg (~> 1.2, >= 1.2.3)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
   sass-rails (>= 6)
